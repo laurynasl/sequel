@@ -283,7 +283,8 @@ module Sequel
         else
           if empty_val_array
             if op == :IN
-              literal(SQL::BooleanExpression.from_value_pairs([[cols, cols]], :AND, true))
+              #literal(SQL::BooleanExpression.from_value_pairs([[cols, cols]], :AND, true))
+              literal(false)
             else
               literal(1=>1)
             end
